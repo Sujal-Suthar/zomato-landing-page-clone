@@ -64,3 +64,4 @@ GitHub: https://github.com/Sujal-Suthar
 ---
 
 ⭐ If you like this project, consider giving it a Star!
+Built as a frontend practice project.
