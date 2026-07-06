@@ -1,0 +1,1203 @@
+/* ==========================================
+   ZOMATO CLONE - STYLE.CSS (PART 1)
+   Hero Section + Header
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .15);
+    backdrop-filter: blur(12px);
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: .4s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #e23744;
+    transition: .4s;
+}
+
+nav a:hover {
+    color: #ff5d6c;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ================= HERO ================= */
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Background Video */
+
+main video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Dark Overlay */
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    z-index: -1;
+}
+
+/* Hero Content */
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeUp 1s ease;
+}
+
+/* Main Logo */
+
+.main-logo {
+    width: 180px;
+    margin-bottom: 20px;
+    animation: zoom 1s ease;
+}
+
+/* Heading */
+
+.hero-content h1 {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.hero-content .red {
+    color: #e23744;
+}
+
+/* Paragraph */
+
+.hero-content p {
+    margin-top: 18px;
+    font-size: 22px;
+    max-width: 700px;
+    color: #f1f1f1;
+}
+
+/* Download Buttons */
+
+.hero-logo {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-logo img {
+    width: 180px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.hero-logo img:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, .25);
+}
+
+/* Scroll Down */
+
+.scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    animation: bounce 1.5s infinite;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes zoom {
+
+    from {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-12px);
+    }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .main-logo {
+        width: 140px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .hero-logo {
+        flex-direction: column;
+    }
+
+    .hero-logo img {
+        width: 170px;
+    }
+
+    .scroll {
+        font-size: 18px;
+    }
+
+}
+
+
+
+
+
+/* ==========================================
+   ZOMATO CLONE - STYLE.CSS (PART 2)
+   FEATURES SECTION
+========================================== */
+
+/* ================= FEATURES ================= */
+
+.features {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 8%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 55px;
+    color: #e23744;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 70px;
+}
+
+/* Feature Grid */
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 35px;
+
+}
+
+/* Card */
+
+.card {
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
+
+    transition: .45s;
+
+    cursor: pointer;
+
+}
+
+/* Card Hover */
+
+.card:hover {
+
+    transform: translateY(-15px);
+
+    box-shadow: 0 25px 50px rgba(226, 55, 68, .25);
+
+}
+
+/* Image */
+
+.card img {
+
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    transition: .5s;
+
+}
+
+.card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+/* Content */
+
+.card .content {
+
+    padding: 30px;
+
+}
+
+.card h3 {
+
+    font-size: 30px;
+
+    color: #222;
+
+    margin-bottom: 15px;
+
+}
+
+.card p {
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+/* Red Line */
+
+.card::after {
+
+    content: "";
+
+    display: block;
+
+    width: 0%;
+
+    height: 5px;
+
+    background: #e23744;
+
+    transition: .4s;
+
+}
+
+.card:hover::after {
+
+    width: 100%;
+
+}
+
+/* Fade Animation */
+
+.card {
+
+    animation: cardFade .9s ease forwards;
+
+}
+
+.card:nth-child(2) {
+
+    animation-delay: .2s;
+
+}
+
+.card:nth-child(3) {
+
+    animation-delay: .4s;
+
+}
+
+@keyframes cardFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(50px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:900px) {
+
+    .features {
+
+        padding: 80px 25px;
+
+    }
+
+    .features h2 {
+
+        font-size: 40px;
+
+    }
+
+    .subtitle {
+
+        font-size: 18px;
+
+    }
+
+    .card h3 {
+
+        font-size: 25px;
+
+    }
+
+    .card p {
+
+        font-size: 16px;
+
+    }
+
+    .card img {
+
+        height: 210px;
+
+    }
+
+}
+
+
+
+
+
+
+/* ==========================================
+   ZOMATO CLONE - STYLE.CSS (PART 3)
+   WHY CHOOSE US SECTION
+========================================== */
+
+.why-us {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 8%;
+    background: linear-gradient(135deg, #fafafa, #ffffff);
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 55px;
+    color: #e23744;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.why-us .subtitle {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 70px;
+}
+
+.features-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 35px;
+
+}
+
+/* Feature Card */
+
+.feature-card {
+
+    background: #fff;
+
+    padding: 40px 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+    transition: .45s;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+/* Hover */
+
+.feature-card:hover {
+
+    transform: translateY(-15px);
+
+    box-shadow: 0 25px 50px rgba(226, 55, 68, .25);
+
+}
+
+/* Top Border Animation */
+
+.feature-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0%;
+
+    height: 5px;
+
+    background: #e23744;
+
+    transition: .5s;
+
+}
+
+.feature-card:hover::before {
+
+    width: 100%;
+
+}
+
+/* Icon */
+
+.icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    background: #ffe5e8;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: auto;
+
+    font-size: 38px;
+
+    margin-bottom: 25px;
+
+    transition: .4s;
+
+}
+
+/* Icon Hover */
+
+.feature-card:hover .icon {
+
+    transform: rotate(360deg) scale(1.1);
+
+    background: #e23744;
+
+    color: #fff;
+
+}
+
+/* Heading */
+
+.feature-card h3 {
+
+    font-size: 28px;
+
+    color: #222;
+
+    margin-bottom: 15px;
+
+}
+
+/* Text */
+
+.feature-card p {
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+}
+
+/* Animation */
+
+.feature-card {
+
+    opacity: 0;
+
+    animation: fadeCard .8s forwards;
+
+}
+
+.feature-card:nth-child(1) {
+
+    animation-delay: .2s;
+
+}
+
+.feature-card:nth-child(2) {
+
+    animation-delay: .4s;
+
+}
+
+.feature-card:nth-child(3) {
+
+    animation-delay: .6s;
+
+}
+
+.feature-card:nth-child(4) {
+
+    animation-delay: .8s;
+
+}
+
+@keyframes fadeCard {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(60px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:900px) {
+
+    .why-us {
+
+        padding: 80px 25px;
+
+    }
+
+    .why-us h2 {
+
+        font-size: 40px;
+
+    }
+
+    .why-us .subtitle {
+
+        font-size: 18px;
+
+    }
+
+    .feature-card {
+
+        padding: 30px;
+
+    }
+
+    .feature-card h3 {
+
+        font-size: 24px;
+
+    }
+
+    .feature-card p {
+
+        font-size: 16px;
+
+    }
+
+    .icon {
+
+        width: 75px;
+
+        height: 75px;
+
+        font-size: 30px;
+
+    }
+
+}
+
+
+
+/* ==========================================
+   ZOMATO CLONE - STYLE.CSS (PART 4)
+   INDIA MAP SECTION
+========================================== */
+
+.india-map-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 8%;
+    background: linear-gradient(135deg, #0f172a, #111827, #1f2937);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/* Left Content */
+
+.left-content {
+    flex: 1;
+    min-width: 350px;
+    animation: leftFade 1s ease;
+}
+
+.left-content h4 {
+    color: #ff5c67;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.left-content h2 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.left-content p {
+    color: #d1d5db;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Stats Grid */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Stat Card */
+
+.stat-box {
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 18px;
+    padding: 30px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.stat-box:hover {
+    background: #e23744;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(226, 55, 68, .35);
+}
+
+.stat-box h3 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.stat-box span {
+    color: #eee;
+    font-size: 17px;
+}
+
+/* Right Content */
+
+.right-content {
+    flex: 1;
+    text-align: center;
+    min-width: 350px;
+    animation: rightFade 1s ease;
+}
+
+.right-content img {
+    width: 100%;
+    max-width: 650px;
+    transition: .5s;
+    filter: drop-shadow(0 0 30px rgba(226, 55, 68, .35));
+}
+
+.right-content img:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+/* Floating Animation */
+
+@keyframes floatMap {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+.right-content img {
+    animation: floatMap 4s ease-in-out infinite;
+}
+
+/* Left Animation */
+
+@keyframes leftFade {
+
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* Right Animation */
+
+@keyframes rightFade {
+
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:1000px) {
+
+    .india-map-section {
+
+        flex-direction: column-reverse;
+        text-align: center;
+
+    }
+
+    .left-content h2 {
+
+        font-size: 42px;
+
+    }
+
+    .left-content p {
+
+        font-size: 17px;
+
+    }
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .left-content h2 {
+
+        font-size: 34px;
+
+    }
+
+    .left-content h4 {
+
+        font-size: 16px;
+
+    }
+
+    .right-content img {
+
+        max-width: 100%;
+
+    }
+
+    .stat-box {
+
+        padding: 22px;
+
+    }
+
+    .stat-box h3 {
+
+        font-size: 28px;
+
+    }
+
+}
+
+
+
+
+
+/* ==========================================
+   ZOMATO CLONE - STYLE.CSS (PART 5)
+   FOOTER + BACK TO TOP + SCROLLBAR
+========================================== */
+
+/* ================= DOWNLOAD APP ================= */
+
+.download-app {
+    width: 100%;
+    padding: 100px 8%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.download-app h2 {
+    font-size: 52px;
+    color: #e23744;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.download-app p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.download-buttons img {
+    width: 200px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.download-buttons img:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(226, 55, 68, .25);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111;
+    color: #fff;
+    padding: 70px 8% 30px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.footer-box h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-box p {
+    color: #bdbdbd;
+    line-height: 1.8;
+}
+
+.footer-box a {
+    display: block;
+    color: #bdbdbd;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: .3s;
+}
+
+.footer-box a:hover {
+    color: #e23744;
+    padding-left: 8px;
+}
+
+footer hr {
+    margin: 40px 0 20px;
+    border: none;
+    height: 1px;
+    background: #333;
+}
+
+.copyright {
+    text-align: center;
+    color: #aaa;
+    font-size: 15px;
+}
+
+.copyright strong {
+    color: #e23744;
+}
+
+/* ================= BACK TO TOP ================= */
+
+#topBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #e23744;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(226, 55, 68, .35);
+    transition: .3s;
+    z-index: 999;
+}
+
+#topBtn:hover {
+    transform: translateY(-5px) scale(1.08);
+    background: #ff4d5b;
+}
+
+/* ================= CUSTOM SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e23744;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff5d6c;
+}
+
+/* ================= SELECTION ================= */
+
+::selection {
+    background: #e23744;
+    color: #fff;
+}
+
+/* ================= SMOOTH FADE ================= */
+
+section {
+    animation: fadeSection 1s ease;
+}
+
+@keyframes fadeSection {
+
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px) {
+
+    .download-app h2 {
+        font-size: 36px;
+    }
+
+    .download-app p {
+        font-size: 18px;
+    }
+
+    .download-buttons img {
+        width: 170px;
+    }
+
+    .footer-container {
+        text-align: center;
+    }
+
+    #topBtn {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
+
+
+nav a.active{
+    color:#e23744;
+}
+
+nav a.active::after{
+    width:100%;
+}
