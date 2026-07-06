@@ -60,7 +60,9 @@ This project was created to practice frontend web development, improve HTML stru
 **Sujal Suthar**
 
 GitHub: https://github.com/Sujal-Suthar
-This is my live sebsite link:https://sujal-suthar.github.io/zomato-landing-page-clone/
+
+**This is my live website link:**
+https://sujal-suthar.github.io/zomato-landing-page-clone/
 
 ---
 
